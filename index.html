@@ -5,59 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مهند يوسف سيف سلام | مهندس برمجيات</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
     <!-- Navigation -->
-    <nav>
+    <nav class="glass-nav">
         <div class="container">
-            <div class="logo">مهند يوسف</div>
+            <div class="logo">
+                <span class="logo-text">&lt;مهند/&gt;</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">عني</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="#contact">اتصل بي</a></li>
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">عني</a></li>
+                <li><a href="#skills" class="nav-link">المهارات</a></li>
+                <li><a href="#projects" class="nav-link">المشاريع</a></li>
+                <li><a href="#education" class="nav-link">التعليم</a></li>
+                <li><a href="#contact" class="nav-link">تواصل</a></li>
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>مرحباً، أنا <span class="highlight">مهند يوسف سيف سلام</span></h1>
-                <h2>مهندس برمجيات (Software Engineer)</h2>
-                <p>متخصص في تطوير الحلول البرمجية المبتكرة ودمج تقنيات الذكاء الاصطناعي.</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">مرحباً، أنا</p>
+                <h1 class="glitch" data-text="مهند يوسف سيف سلام">مهند يوسف سيف سلام</h1>
+                <h2 class="typing-text">
+                    <span class="static-text">مهندس</span>
+                    <span class="dynamic-text"></span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">متخصص في تطوير الحلول البرمجية المبتكرة ودمج تقنيات الذكاء الاصطناعي</p>
                 <div class="hero-btns">
-                    <a href="#projects" class="btn primary">عرض المشاريع</a>
-                    <a href="#contact" class="btn secondary">تواصل معي</a>
+                    <a href="#projects" class="btn btn-primary glow-btn">
+                        <span>عرض المشاريع</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>تواصل معي</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/MohanadYSS" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mohanad3std@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+967739095044" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
             </div>
+            <div class="hero-visual">
+                <div class="code-window glass-card" id="codeWindow">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">developer.py</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"مهند يوسف"</span>
+        <span class="param">self</span>.role = <span class="string">"Software Engineer"</span>
+        <span class="param">self</span>.gpa = <span class="number">4.00</span>
+        <span class="param">self</span>.skills = [
+            <span class="string">"Python"</span>, <span class="string">"Django"</span>,
+            <span class="string">"Flutter"</span>, <span class="string">"AI"</span>
+        ]
+    
+    <span class="keyword">def</span> <span class="function">build_future</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> <span class="string">"Innovation 🚀"</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">الملخص المهني</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>طالب تقنية معلومات متميز في المستوى الرابع (تخرج متوقع: فبراير 2026) بمعدل تراكمي <strong>4.00/4.00 مع مرتبة الشرف</strong>. أمتلك خبرة عملية قوية في تطوير البرمجيات الشامل (Full-stack) وتطبيقات الموبايل.</p>
-                    <p>متخصص في دمج حلول الذكاء الاصطناعي (AI) ضمن الأنظمة البرمجية باستخدام أدوات متطورة مثل Windsurf. أجمع بين الكفاءة التقنية العالية والمهارات الشخصية الموثقة، وجاهز للانضمام الفوري لسوق العمل للمساهمة في بناء أنظمة مبتكرة.</p>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-user-astronaut"></i></span>
+                الملخص المهني
+            </h2>
+            <div class="about-content">
+                <div class="about-card glass-card parallax-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="about-text">
+                        <p>طالب تقنية معلومات متميز في المستوى الرابع (تخرج متوقع: فبراير 2026) بمعدل تراكمي <span class="highlight-text">4.00/4.00 مع مرتبة الشرف</span>. أمتلك خبرة عملية قوية في تطوير البرمجيات الشامل (Full-stack) وتطبيقات الموبايل.</p>
+                        <p>متخصص في دمج حلول <span class="highlight-text">الذكاء الاصطناعي (AI)</span> ضمن الأنظمة البرمجية باستخدام أدوات متطورة مثل Windsurf. أجمع بين الكفاءة التقنية العالية والمهارات الشخصية الموثقة، وجاهز للانضمام الفوري لسوق العمل للمساهمة في بناء أنظمة مبتكرة.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="4.00">0</span>
+                            <span class="stat-label">المعدل التراكمي</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">مشاريع منجزة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">تقنية متقنة</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-info">
-                    <ul>
-                        <li><strong>الموقع:</strong> الحديدة، اليمن</li>
-                        <li><strong>التعليم:</strong> بكالوريوس تقنية معلومات - جامعة العلوم والتكنولوجيا</li>
-                        <li><strong>المعدل:</strong> 4.00 / 4.00 (الأول على الدفعة)</li>
-                    </ul>
+                <div class="info-cards">
+                    <div class="info-card glass-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>الموقع</h4>
+                        <p>الحديدة، اليمن</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>التعليم</h4>
+                        <p>جامعة العلوم والتكنولوجيا</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-trophy"></i>
+                        <h4>الترتيب</h4>
+                        <p>الأول على الدفعة</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,36 +163,100 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">المهارات التقنية</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-code"></i></span>
+                المهارات التقنية
+            </h2>
+            <div class="skills-container">
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3>لغات البرمجة</h3>
-                    <div class="skill-tags">
-                        <span>Python</span><span>C#</span><span>JavaScript</span><span>Dart</span>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Dart</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
+
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
                     <h3>تطوير الويب</h3>
                     <div class="skill-tags">
-                        <span>HTML5</span><span>CSS3</span><span>Django</span><span>RESTful APIs</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">HTMX</span>
                     </div>
                 </div>
-                <div class="skill-category">
+
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
                     <h3>الموبايل وسطح المكتب</h3>
                     <div class="skill-tags">
-                        <span>Flutter</span><span>.NET MAUI</span><span>Windows Forms</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">.NET MAUI</span>
+                        <span class="skill-tag">Windows Forms</span>
                     </div>
                 </div>
-                <div class="skill-category">
+
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
                     <h3>قواعد البيانات</h3>
                     <div class="skill-tags">
-                        <span>PostgreSQL</span><span>MS SQL Server</span><span>MySQL</span><span>Oracle</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MS SQL Server</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Oracle</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>أدوات الذكاء الاصطناعي والتطوير</h3>
+
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>الذكاء الاصطناعي والأدوات</h3>
                     <div class="skill-tags">
-                        <span>Git/GitHub</span><span>Windsurf Editor</span><span>AI Agents</span><span>VS Code</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Windsurf Editor</span>
+                        <span class="skill-tag">AI Agents</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Android Studio</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card" data-tilt>
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>أدوات التصميم</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Illustrator</span>
+                        <span class="skill-tag">InDesign</span>
                     </div>
                 </div>
             </div>
@@ -105,37 +266,125 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">المشاريع المنجزة</h2>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-rocket"></i></span>
+                المشاريع المنجزة
+            </h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card glass-card" data-tilt>
+                    <div class="project-header">
+                        <div class="project-status live">
+                            <span class="pulse"></span>
+                            قيد التنفيذ
+                        </div>
+                        <div class="project-type">مشروع التخرج</div>
+                    </div>
                     <div class="project-content">
                         <h3>نظام إدارة المحتوى الأكاديمي الذكي (S-ACM)</h3>
-                        <p class="status">مشروع التخرج - قيد التنفيذ</p>
-                        <p>منصة ويب مركزية لحل مشكلة توزيع المحتوى الأكاديمي باستخدام Django و Google Gemini API لتلخيص المحاضرات.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>Django</span><span>Gemini API</span><span>PostgreSQL</span>
+                        <p>منصة ويب مركزية لحل مشكلة توزيع المحتوى الأكاديمي باستخدام Django و Google Gemini API لتلخيص المحاضرات وتوليد الأسئلة.</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> نظام صلاحيات RBAC</span>
+                            <span><i class="fas fa-check"></i> تلخيص بالذكاء الاصطناعي</span>
+                            <span><i class="fas fa-check"></i> واجهة تفاعلية</span>
                         </div>
                     </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Gemini API</span>
+                        <span>PostgreSQL</span>
+                    </div>
                 </div>
+
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card glass-card" data-tilt>
+                    <div class="project-header">
+                        <div class="project-status completed">
+                            <i class="fas fa-check-circle"></i>
+                            مكتمل
+                        </div>
+                    </div>
                     <div class="project-content">
                         <h3>نظام "حساباتي" للإدارة المالية</h3>
-                        <p>تطبيق سطح مكتب لإدارة العمليات المالية للمحلات التجارية (الدخل، المصروفات، الديون).</p>
-                        <div class="project-tags">
-                            <span>C#</span><span>SQL Server</span><span>.NET</span>
+                        <p>تطبيق سطح مكتب متكامل لإدارة العمليات المالية للمحلات التجارية يشمل الدخل والمصروفات والديون.</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> إدارة الحسابات</span>
+                            <span><i class="fas fa-check"></i> تقارير مالية</span>
+                            <span><i class="fas fa-check"></i> واجهة سهلة</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>C#</span>
+                        <span>SQL Server</span>
+                        <span>.NET</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card" data-tilt>
+                    <div class="project-header">
+                        <div class="project-status completed">
+                            <i class="fas fa-check-circle"></i>
+                            مكتمل
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>نظام الوساطة العقارية</h3>
+                        <p>منصة متكاملة لربط مُلاك العقارات بالمشترين مع إدارة القوائم والعملاء بفعالية عالية.</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> إدارة العقارات</span>
+                            <span><i class="fas fa-check"></i> نظام العملاء</span>
+                            <span><i class="fas fa-check"></i> البحث المتقدم</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>C#</span>
+                        <span>SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
+                التعليم والشهادات
+            </h2>
+            <div class="education-content">
+                <div class="education-main glass-card" data-tilt>
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>بكالوريوس تقنية معلومات</h3>
+                        <h4>كلية الهندسة - جامعة العلوم والتكنولوجيا</h4>
+                        <p class="edu-date">التخرج المتوقع: فبراير 2026</p>
+                        <div class="edu-achievement">
+                            <span class="gpa-badge">4.00 / 4.00</span>
+                            <span class="honor-badge">ممتاز مع مرتبة الشرف</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>نظام الوساطة العقارية</h3>
-                        <p>منصة لربط مُلاك العقارات بالمشترين مع إدارة القوائم والعملاء بفعالية.</p>
-                        <div class="project-tags">
-                            <span>C#</span><span>SQL Server</span>
-                        </div>
+                <div class="certificates-grid">
+                    <div class="cert-card glass-card">
+                        <i class="fas fa-comments"></i>
+                        <span>مهارات الاتصال</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <i class="fas fa-brain"></i>
+                        <span>التفكير الناقد</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <i class="fas fa-network-wired"></i>
+                        <span>مقدمة في الشبكات - Cisco</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <i class="fas fa-language"></i>
+                        <span>دبلوم اللغة الإنجليزية</span>
                     </div>
                 </div>
             </div>
@@ -145,29 +394,63 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">تواصل معي</h2>
-            <div class="contact-wrapper">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-envelope"></i></span>
+                تواصل معي
+            </h2>
+            <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+967 739095044</p>
+                    <div class="contact-card glass-card" data-tilt>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <a href="tel:+967739095044">+967 739095044</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>mohanad3std@gmail.com</p>
+                    <div class="contact-card glass-card" data-tilt>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <a href="mailto:mohanad3std@gmail.com">mohanad3std@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <p>github.com/MohanadYSS</p>
+                    <div class="contact-card glass-card" data-tilt>
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/MohanadYSS" target="_blank">github.com/MohanadYSS</a>
+                        </div>
+                    </div>
+                    <div class="contact-card glass-card" data-tilt>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع</h4>
+                            <span>الحديدة، اليمن</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2026 | مهند يوسف سيف سلام</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>&lt;مهند/&gt;</span>
+                </div>
+                <p>صُمم وطُوّر بشغف باستخدام HTML, CSS, JavaScript</p>
+                <p class="copyright">جميع الحقوق محفوظة &copy; 2026 | مهند يوسف سيف سلام</p>
+            </div>
         </div>
     </footer>
 
